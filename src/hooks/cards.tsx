@@ -23,5 +23,9 @@ export function UseCards() {
     }
   }
 
-  return { cards, error, setError,newCard, addCard };
+  function removeCard(id:number) {
+    setCards(cards.filter((card) => card.id !== id));
+  }
+
+  return { cards, error, setError,newCard,removeCard, addCard };
 }

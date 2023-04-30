@@ -6,21 +6,21 @@ import { ErrorMessage } from "./components/ErrorMessage";
 import "./styles/App.scss";
 
 function App() {
-  const { cards, error, newCard, setError } = UseCards();
+  const { cards, error, newCard, setError, removeCard } = UseCards();
 
   return (
     <>
       <div className="container">
         <div className="top__content">
-          <h1>Hello wrld..</h1>
+          <h2>Hello wrld..</h2>
           <LocationForm fetchData={newCard} />
           {error && (
             <ErrorMessage errorMsg={error} close={() => setError("")} />
           )}
         </div>
         <div className="cards-list">
-          {cards.map((card) => (
-            <SmallCard weather={card} key={card.id} />
+          {cards.reverse().map((card) => (
+            <SmallCard weather={card} removeCard={() => removeCard(card.id)} key={card.id} />
           ))}
         </div>
       </div>
