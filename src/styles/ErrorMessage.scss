@@ -1,0 +1,18 @@
+.error-message{
+    margin: 0 auto;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(255, 0, 0, 0.1);
+
+    &__img{
+        margin-right: 5px;
+    }
+    &__text{
+        padding: 10px 0;
+        margin: auto 0px;
+        color: red;
+    }
+}
