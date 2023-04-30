@@ -7,23 +7,22 @@ export function UseCards() {
   const [error, setError] = useState("");
 
   function addCard(card: WeatherData) {
-    if (cards.length) {
-      for (const item of cards) {
-        if (item.id === card.id) {
-          console.log('hui')
-          setError("This card already exist")
-          return(
-            <ErrorMessage errorMsg={error} />
-          );
-        } else {
-          setCards((prev) => [...prev, card]);
-        }
-      }
-    }else{
-    setCards(prev => [...prev, card])
-    }
-
+    setCards((prev) => [...prev, card]);
   }
 
-  return { cards, error, setError, addCard };
+  function newCard(card: WeatherData){
+    if (cards.length !== 0 ){
+      for (const item of cards){
+        if (card.id == item.id){
+          setError('This card already exist')
+          return
+        }
+      }
+      addCard(card)
+    }else{
+      addCard(card)
+    }
+  }
+
+  return { cards, error, setError,newCard, addCard };
 }

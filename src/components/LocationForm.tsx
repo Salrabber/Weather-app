@@ -13,7 +13,6 @@ interface LocationFormProps {
 
 export function LocationForm({ fetchData }: LocationFormProps) {
   const [value, setValue] = useState("");
-  // const [error, setError] = useState("");
   const {error, setError} = UseCards()
   const [loading, setLoading] = useState(false)
 
@@ -58,7 +57,6 @@ export function LocationForm({ fetchData }: LocationFormProps) {
           value={value}
           autoComplete="off"
         />
-        <div className="invalid-feedback">Please provide a valid city.</div>
         <div className="col-12">
           <button className="btn btn-primary" type="submit">
             Search
