@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { WeatherData } from "../models";
-import { ErrorMessage } from "../components/ErrorMessage";
 
 export function UseCards() {
   const [cards, setCards] = useState<WeatherData[]>([]);

@@ -45,10 +45,10 @@ export function LocationForm({ fetchData }: LocationFormProps) {
 
   return (
     <div className="wrapper">
-      <form className="col-md-6" onSubmit={submitHandler}>
-        <label form="validationCustom03" className="form-label">
+      <label form="validationCustom03" className="form-label">
           Enter City
         </label>
+      <form className="col-md-6" onSubmit={submitHandler}>
         <input
           type="text"
           className="form-control"

@@ -1,0 +1,27 @@
+.weather-data {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    border-radius: 5%;
+    width: 200px;
+    height: 200px;
+    background-color: #e8e0e0;
+  }
+  
+  .weather-icon {
+    margin-right: 10px;
+  }
+  
+  .weather-description {
+    font-weight: bold;
+  }
+  
+  .weather-temperature {
+    font-size: 24px;
+    font-weight: bold;
+    // margin-top: 10px;
+    margin-bottom: 0;
+  }
+

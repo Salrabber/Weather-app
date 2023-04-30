@@ -1,4 +1,3 @@
-import { UseCards } from "../hooks/cards";
 import "../styles/ErrorMessage.scss";
 
 interface ErrorMessageProps {
@@ -7,9 +6,6 @@ interface ErrorMessageProps {
 }
 
 export function ErrorMessage({ errorMsg, close }: ErrorMessageProps) {
-
-    // const {error, setError} = UseCards();
-
   return (
     <div className="error-message" onClick={close}>
       <svg
