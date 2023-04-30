@@ -1,4 +1,3 @@
-import { MouseEventHandler } from "react";
 import { WeatherData } from "../models";
 
 import "../styles/SmallCard.scss";
