@@ -30,6 +30,7 @@ function App() {
   }
   function openCard(id: number){
     const cardId = findIndexById(id)
+    setExtreme('empty')
     if(cardId == 0){
       setExtreme('left')
     }
@@ -39,6 +40,7 @@ function App() {
     if(cards.length == 1){
       setExtreme('both')
     }
+    
     return findIndexById(id)
   }
   
