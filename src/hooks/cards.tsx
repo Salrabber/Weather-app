@@ -8,7 +8,12 @@ export function UseCards() {
   
 
   function addCard(card: WeatherData) {
-    setCards((prev) => [...prev, card]);
+    // setCards((prev) => [...prev, card]);
+    setCards((prevCards) => {
+      const newCards = [...prevCards];
+      newCards.unshift(card);
+      return newCards;
+    });
   }
 
   function findIndexById(id: number): number {

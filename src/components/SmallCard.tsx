@@ -10,12 +10,10 @@ interface SmallCardProps {
 
 export function SmallCard({ weather, removeCard, openModal }: SmallCardProps) {
   return (
-    <div className="sc-weather-data"
-    onClick={openModal}
-    >
+    <div className="sc-wrapper">
       <svg
-       onClick={removeCard}
-        className="sc-weather-data__svg"
+        onClick={removeCard}
+        className="sc-wrapper__svg"
         xmlns="http://www.w3.org/2000/svg"
         width="24"
         height="24"
@@ -31,6 +29,8 @@ export function SmallCard({ weather, removeCard, openModal }: SmallCardProps) {
         />
         <path fill="none" d="M0,0h24v24H0V0z" />
       </svg>
+<div className="sc-weather-data" onClick={openModal}>
+      
 
       <h2 className="sc-weather-data__title">{weather.name}</h2>
       <img
@@ -39,9 +39,13 @@ export function SmallCard({ weather, removeCard, openModal }: SmallCardProps) {
         alt={weather.weather[0].description}
       />
       <div>
-        <p className="sc-weather-description">{weather.weather[0].description}</p>
+        <p className="sc-weather-description">
+          {weather.weather[0].description}
+        </p>
         <p className="sc-weather-temperature">{weather.main.temp}&deg;C</p>
       </div>
     </div>
+    </div>
+    
   );
 }

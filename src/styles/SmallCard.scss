@@ -1,3 +1,15 @@
+
+.sc-wrapper{
+  position: relative;
+  &__svg{
+    position: absolute;
+    top: 3px;
+    right: 3px;
+    cursor: pointer;
+  }
+}
+
+
 .sc-weather-data {
     display: flex;
     flex-direction: column;
@@ -9,7 +21,6 @@
     width: 200px;
     height: 200px;
     background-color: #e8e0e0;
-    position: relative;
     cursor: pointer;
     transition: all .2s;
     &:hover{
@@ -18,11 +29,7 @@
     &__title{
       margin: 0;
     }
-    &__svg{
-      position: absolute;
-      top: 3px;
-      right: 3px;
-    }
+    
   }
   
   .sc-weather-icon {

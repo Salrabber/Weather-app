@@ -28,7 +28,7 @@ function App() {
           )}
         </div>
         <div className="cards-list">
-          {cards.reverse().map((card) => (
+          {cards.map((card) => (
             <SmallCard weather={card} key={card.id} removeCard={() => removeCard(card.id)} openModal={() => open(findIndexById(card.id))} />
           ))}
         </div>
