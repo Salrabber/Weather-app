@@ -4,9 +4,15 @@ import { WeatherData } from "../models";
 export function UseCards() {
   const [cards, setCards] = useState<WeatherData[]>([]);
   const [error, setError] = useState("");
+  const [modal, setModal] = useState(false);
+  
 
   function addCard(card: WeatherData) {
     setCards((prev) => [...prev, card]);
+  }
+
+  function findIndexById(id: number): number {
+    return cards.findIndex((obj) => obj.id === id);
   }
 
   function newCard(card: WeatherData){
@@ -27,5 +33,5 @@ export function UseCards() {
     setCards(cards.filter((card) => card.id !== id));
   }
 
-  return { cards, error, setError,newCard,removeCard, addCard };
+  return { cards, error, setError,newCard,removeCard, addCard, modal, setModal, findIndexById };
 }

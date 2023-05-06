@@ -1,0 +1,29 @@
+
+
+.modall{
+    position: fixed;
+    background-color: rgba(0,0,0,0.5);
+    right: 0;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    z-index: 5;
+    &__body{
+        width: 500px;
+        padding: 5px;
+        border-radius: 10px;
+        background: white;
+        position: absolute;
+        top: 100px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 6;
+    }
+    &__svg{
+        position: absolute;
+        top: 3px;
+        right: 3px;
+        z-index: 6;
+        cursor: pointer;
+      }
+}

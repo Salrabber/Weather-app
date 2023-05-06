@@ -5,14 +5,17 @@ import "../styles/SmallCard.scss";
 interface SmallCardProps {
   weather: WeatherData;
   removeCard: () => void;
+  openModal: () => void;
 }
 
-export function SmallCard({ weather, removeCard }: SmallCardProps) {
+export function SmallCard({ weather, removeCard, openModal }: SmallCardProps) {
   return (
-    <div className="weather-data">
+    <div className="sc-weather-data"
+    onClick={openModal}
+    >
       <svg
        onClick={removeCard}
-        className="weather-data__svg"
+        className="sc-weather-data__svg"
         xmlns="http://www.w3.org/2000/svg"
         width="24"
         height="24"
@@ -29,15 +32,15 @@ export function SmallCard({ weather, removeCard }: SmallCardProps) {
         <path fill="none" d="M0,0h24v24H0V0z" />
       </svg>
 
-      <h2 className="weather-data__title">{weather.name}</h2>
+      <h2 className="sc-weather-data__title">{weather.name}</h2>
       <img
-        className="weather-icon"
+        className="sc-weather-icon"
         src={`https://openweathermap.org/img/w/${weather.weather[0].icon}.png`}
         alt={weather.weather[0].description}
       />
       <div>
-        <p className="weather-description">{weather.weather[0].description}</p>
-        <p className="weather-temperature">{weather.main.temp}&deg;C</p>
+        <p className="sc-weather-description">{weather.weather[0].description}</p>
+        <p className="sc-weather-temperature">{weather.main.temp}&deg;C</p>
       </div>
     </div>
   );
