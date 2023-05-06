@@ -6,6 +6,7 @@ interface IModalContext{
     open: (id: number) => void;
     close: () => void;
     switchCard: (id: number) => void;
+    
 }
 
 export const ModalContext = createContext<IModalContext>({

@@ -41,7 +41,7 @@ export function BigCard({ data }: BigCardProps) {
           </div>
           <div className="detail">
             <div className="bc-label">Timezone:</div>
-            <div className="value">{data.timezone}</div>
+            <div className="value">{data.timezone} sec</div>
           </div>
         </div>
       </div>

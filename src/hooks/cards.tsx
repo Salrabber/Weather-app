@@ -5,10 +5,10 @@ export function UseCards() {
   const [cards, setCards] = useState<WeatherData[]>([]);
   const [error, setError] = useState("");
   const [modal, setModal] = useState(false);
+  const [extreme, setExtreme] = useState('both')
   
 
   function addCard(card: WeatherData) {
-    // setCards((prev) => [...prev, card]);
     setCards((prevCards) => {
       const newCards = [...prevCards];
       newCards.unshift(card);
@@ -38,5 +38,5 @@ export function UseCards() {
     setCards(cards.filter((card) => card.id !== id));
   }
 
-  return { cards, error, setError,newCard,removeCard, addCard, modal, setModal, findIndexById };
+  return { cards, error, setError,newCard,removeCard, addCard, modal, setModal, findIndexById, extreme, setExtreme };
 }

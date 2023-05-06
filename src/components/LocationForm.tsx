@@ -32,8 +32,6 @@ export function LocationForm({ fetchData }: LocationFormProps) {
       const response = await axios.get(
         `https://api.openweathermap.org/data/2.5/weather?q=${value}&appid=${API_KEY}&units=metric`
       );
-      console.log(response.data)
-      console.log(Object.entries(response.data))
       fetchData(response.data);
       setLoading(false);
       setValue("");
